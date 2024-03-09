@@ -33,8 +33,14 @@
 }
 
 
-.body-search-bar {
+.body-filter-btn {
     margin: 15px;
+    padding: 7px;
+    background-color: #f66d13;
+}
+.body-filter-btn:hover{
+    cursor: pointer;
+    background-color: #e78c56;
 }
 .restaurant-container{
     display: flex;
@@ -44,14 +50,19 @@
 .restaurant-card{
     margin: 10px;
     width: 200px;
-    height: 300px;
+    /*height: 300px;*/
 }
 .restaurant-card:hover {
+    cursor: pointer;
     border: solid skyblue;
     transition: 0.1s ease-in-out;
 }
 .restaurant-card-image{
     width: 100%;
+}
+.restaurant-card-tile-rating-div{
+    display: flex;
+    justify-content: space-between;
 }
 .restaurant-card-detail{
     display: flex;
