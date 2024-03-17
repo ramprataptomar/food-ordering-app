@@ -9,13 +9,24 @@
     align-items: center;
     justify-content: space-between;
     height: 60px;
+    /*width: 100%;*/
     overflow: hidden;
     padding: 10px;
-    background-color: #324680;
+    background-color: #c2c6d3;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    box-shadow:  10px 5px 15px rgba(158, 136, 166, 0.85);
+
 }
 .logo {
-    width: 100px;
+    width: 115px;
     margin-left: 20px;
+}
+.logo:hover{
+    cursor: pointer;
 }
 .nav-items-container > ul {
     display: flex;
@@ -32,15 +43,34 @@
     cursor: pointer;
 }
 
+.outlet{
+    margin-top: 90px;
+}
 
+.body-container {
+    padding: 20px;
+}
+.body-container-filter-sorting{
+    display: flex;
+    padding: 15px;
+    gap: 30px;
+    margin-left: 8px;
+}
+.body-container-search-filter{
+    display: flex;
+    gap: 3px;
+}
 .body-filter-btn {
-    margin: 15px;
+    /*margin: 15px;*/
     padding: 7px;
-    background-color: #f66d13;
+    border-radius: 15px;
+    outline: auto;
+    /*background-color: #f66d13;*/
 }
 .body-filter-btn:hover{
     cursor: pointer;
-    background-color: #e78c56;
+    color: #2d55bb;
+    /*background-color: #e78c56;*/
 }
 .restaurant-container{
     display: flex;
@@ -48,16 +78,19 @@
     flex-wrap: wrap;
 }
 .restaurant-card{
+    border-radius: 18px;
     margin: 10px;
     width: 200px;
-    /*height: 300px;*/
+    /*height: 230px;*/
+    padding: 5px;
 }
 .restaurant-card:hover {
     cursor: pointer;
-    border: solid skyblue;
-    transition: 0.1s ease-in-out;
+    transform: scale(1.01);
+    box-shadow: -1px -1px 10px 2px rgba(0, 0, 0, 0.92);
 }
 .restaurant-card-image{
+    border-radius: 15px;
     width: 100%;
 }
 .restaurant-card-tile-rating-div{
@@ -67,4 +100,28 @@
 .restaurant-card-detail{
     display: flex;
     flex-flow: column;
+    gap: 4px;
+}
+
+/*footer*/
+.upper-footer {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #e0dddd;
+    height: 100px;
+}
+.upper-footer-punch-line {
+    font-size: xx-large;
+    font-weight: bold;
+    color: rgba(38, 36, 36, 0.97);
+}
+.upper-footer-images img {
+    /*width: 200px;*/
+    height: 68px;
+}
+.lower-footer {
+    background-color: rgb(2, 6, 12);
+    height: 400px;
 }
