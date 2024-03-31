@@ -7,12 +7,10 @@ function Header() {
                 <img className="logo" src={LOGO_URL} alt="web-logo"/>
             </div>
             <div className="nav-items-container">
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/orders">Orders</Link></li>
-                    <li><Link to="/contact">Contact</Link></li>
-                </ul>
+                    <div><Link to="/">Home</Link></div>
+                    <div><Link to="/about">About</Link></div>
+                    <div><Link to="/orders">Orders</Link></div>
+                    <div><Link to="/contact">Contact</Link></div>
             </div>
         </div>
     );

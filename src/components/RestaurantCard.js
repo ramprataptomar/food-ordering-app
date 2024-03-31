@@ -1,7 +1,10 @@
 import {CDN_URL} from "../utils/constants";
+import {Link} from "react-router-dom";
+import RestaurantMenu from "./RestaurantMenu";
 
 function RestaurantCard(props) {
     const {name, cloudinaryImageId, costForTwo, avgRating, locality, areaName} = props.restaurantsDataList;
+
     return (
         <div className="restaurant-card">
             <img className="restaurant-card-image" src={CDN_URL+cloudinaryImageId} alt="Food Image"/>

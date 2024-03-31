@@ -19,7 +19,6 @@
     left: 0;
     z-index: 1;
     box-shadow:  10px 5px 15px rgba(158, 136, 166, 0.85);
-
 }
 .logo {
     width: 115px;
@@ -28,18 +27,20 @@
 .logo:hover{
     cursor: pointer;
 }
-.nav-items-container > ul {
+.nav-items-container{
     display: flex;
 }
-.nav-items-container > ul > li {
-    color: #30ae81;
+.nav-items-container > div{
     font-weight: bold;
     list-style: none;
     margin: 10px;
     padding: 15px;
 }
-.nav-items-container > ul > li:hover {
-    color: #7b1655;
+.nav-items-container > div > a{
+    text-decoration: none;
+    color: #30ae81;
+}
+.nav-items-container > div:hover {
     cursor: pointer;
 }
 
@@ -76,6 +77,10 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+.restaurant-container > a{
+    text-decoration: none;
+    color: black;
 }
 .restaurant-card{
     border-radius: 18px;
@@ -123,5 +128,112 @@
 }
 .lower-footer {
     background-color: rgb(2, 6, 12);
-    height: 400px;
+    height: 250px;
+}
+.lower-footer-content{
+    display: flex;
+    justify-content: space-around;
+    padding: 60px;
+    color: #c2c6d3;
+    font-size: medium;
+}
+.lower-footer-content > div {
+    display: flex;
+    flex-flow: column;
+}
+.footer-img {
+    width: 120px;
+}
+.links-title {
+    color: grey;
+    margin: 8px 0;
+}
+.links1 > div{
+    padding: 3px;
+}
+.links1 > div > a {
+    text-decoration: none;
+    color: #e0dddd;
+}
+
+/*About*/
+.about-lines{
+    background-color: #987979;
+    height: auto;
+    font-size: xx-large;
+    color: green;
+    padding: 60px;
+    text-align: start;
+}
+
+/*Orders*/
+.empty-cart{
+    display: flex ;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    /*margin: 10px;*/
+    > a{
+        text-decoration: none;
+    }
+}
+.cart-img{
+    width: 400px;
+    margin: 40px;
+}
+.cart-title{
+    margin: 15px;
+    font-weight: bold;
+}
+.cart-button{
+    margin: 10px;
+    background-color: orange;
+    padding: 15px 80px;
+    color: white;
+    font-weight: bold;
+}
+.cart-button:hover{
+    cursor: pointer;
+    box-shadow: -5px -5px 15px rgba(158, 136, 166, 0.85);
+}
+
+/*Contact*/
+.contact{
+    display: flex;
+    margin: 200px 0;
+    height: 300px;
+}
+.contact-left{
+    width: 50%;
+    background-color: #ab9898;
+    text-align: center;
+    padding-top: 80px;
+    font-weight: bold;
+    font-size: xx-large;
+    color: #bbc252;
+}
+.contact-right{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    > textarea{
+        margin: 10px 200px;
+        padding: 10px;
+        width: 50%;
+        height: 500px;
+    }
+    > input, > button{
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        width: 50%;
+        margin: 10px 200px;
+        padding: 10px;
+        background-color: rgba(200, 154, 225, 0.85);
+        border-radius: 15px;
+    }
+    > button:hover{
+            cursor: pointer;
+            transform: scale(1.05);
+    }
 }

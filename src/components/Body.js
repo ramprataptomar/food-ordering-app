@@ -2,6 +2,10 @@ import RestaurantCard from "./RestaurantCard";
 import {restaurantsDataList} from '../utils/restaurantsData';
 import {useEffect, useState} from "react";
 import {MENU_URL} from "../utils/constants";
+import {Link} from "react-router-dom";
+import Shimmer from "./Shimmer";
+import RestaurantMenu from "./RestaurantMenu";
+
 
 function Body() {
 
@@ -18,7 +22,14 @@ function Body() {
         const json = await data.json();
         setRestaurantList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
         setFilteredList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+        {
+            console.log(restaurantList);
+            <RestaurantMenu key={restaurantList} menu={restaurantList}/>
+        }
     }
+
+    if(restaurantList == null)
+        return <Shimmer/>;
 
     return (
         <div className="body-container">
@@ -27,7 +38,7 @@ function Body() {
                     <input
                         className="body-filter-btn"
                         type="text"
-                        placeholder="Search your food corner"
+                        placeholder="Search your food"
                         value={searchText}
                         onChange={(e) => {
                             setSearchText(e.target.value);
@@ -56,7 +67,7 @@ function Body() {
             <div className="restaurant-container">
                 {
                     filteredList?.map((restaurant) => (
-                        <RestaurantCard key={restaurant.info.id} restaurantsDataList={restaurant.info}/>
+                        <Link to={"/restaurant/"+restaurant.info.id}><RestaurantCard key={restaurant.info.id} restaurantsDataList={restaurant.info}/></Link>
                     ))
                 }
             </div>
