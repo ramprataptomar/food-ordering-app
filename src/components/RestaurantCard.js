@@ -1,4 +1,4 @@
-import {FOOD} from "../../assets/food.jpg"
+import FOOD from "../../assets/food.jpg"
 
 function RestaurantCard(props) {
     const {name, cloudinaryImageId, costForTwo, avgRating, locality, areaName} = props.restaurantsDataList;
