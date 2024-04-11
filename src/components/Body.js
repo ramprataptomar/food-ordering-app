@@ -13,20 +13,20 @@ function Body() {
     const [filteredList, setFilteredList] = useState(restaurantsDataList);
     const [searchText, setSearchText] = useState("");
 
-    useEffect(() => {
-        fetchData();
-    }, []);
+    // useEffect(() => {
+    //     fetchData();
+    // }, []);
 
-    const fetchData = async () => {
-        const data = await fetch(MENU_URL);
-        const json = await data.json();
-        setRestaurantList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-        setFilteredList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-        {
-            console.log(restaurantList);
-            <RestaurantMenu key={restaurantList} menu={restaurantList}/>
-        }
-    }
+    // const fetchData = async () => {
+    //     const data = await fetch(MENU_URL);
+    //     const json = await data.json();
+    //     setRestaurantList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    //     setFilteredList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    //     {
+    //         console.log(restaurantList);
+    //         <RestaurantMenu key={restaurantList} menu={restaurantList}/>
+    //     }
+    // }
 
     if(restaurantList == null)
         return <Shimmer/>;
